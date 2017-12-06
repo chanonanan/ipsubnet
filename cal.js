@@ -110,7 +110,7 @@ function getResult() {
           if (IP_Addr.validity.patternMismatch || IP_Addr.value === '') {
             alert("Invalid IP Address" );
           }else{
-            document.getElementById("result").style.display = "block";
+            document.getElementById("allshow").style.display = "block";
             var message = document.getElementById("ipaddress").value;
             var subnet_mask = find_IP(document.getElementById("subnet").value);
             var networkAddr = cal_Network_Addr(message, subnet_mask);
@@ -206,7 +206,7 @@ function possible_network(ip, subnet, num_host) {
   while (div_table_3.firstChild) {
     div_table_3.removeChild(div_table_3.firstChild);
   }
-  div_table_3.className = "col-md-8 col-md-offset-2 mainbox";
+  div_table_3.className = "mainbox";
   var table = document.createElement("table");
   table.id = "table-3";
   table.className = "table";
@@ -215,8 +215,8 @@ function possible_network(ip, subnet, num_host) {
   var start_IP = find_start_IP(ip, subnet, 0);
   var start_IP_star = find_start_IP(ip, subnet, "*");
   head.appendChild(document.createTextNode("All possible /" + subnet + " Networks"));
-  div_table_3.appendChild(head);
-  div_table_3.appendChild(document.createElement("hr"));
+  // div_table_3.appendChild(head);
+  // div_table_3.appendChild(document.createElement("hr"));
   var tr = document.createElement("tr");
   var th_1 = document.createElement("th");
   var th_2 = document.createElement("th");

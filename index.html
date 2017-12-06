@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ip Subnet</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="tap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,7 +18,7 @@
 
 <div class="container main">
   <div class="row">
-    <div class="col-md-8 col-md-offset-2 mainbox" >
+    <div class="col-md-8 col-md-offset-2 mainbox2" >
       <h2>Ip Subnet</h2>
       <!-- <form id="myForm" > -->
         <table class="table">
@@ -83,93 +84,106 @@
         </div>
 
     </div>
-    <div class="row" id="result">
-      <div id="div-table-2" class="col-md-8 col-md-offset-2 mainbox">
-          <h2>Result</h2>
-          <table id="table-2" class="table">
-              <tr>
-                  <th id="table-2-L">IP Address</th>
-                  <td id="result_ipAddr">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">Network Address</th>
-                  <td id="result_networkAddr">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">Usable Host IP Range</th>
-                  <td id="result_ipRange">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">Broadcast Address</th>
-                  <td id="result_broadcast">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">Total Number of Hosts</th>
-                  <td id="result_totalHost">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">Number of Usable Hosts</th>
-                  <td id="result_usableHost">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">Subnet Mask</th>
-                  <td id="result_subnetMask">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">Wildcard Mask</th>
-                  <td id="result_wildcard">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">Binary Subnet Mask</th>
-                  <td id="result_binarySubnet">NA</td>
-              </tr>
-              <tr>
-                  <th id="result_ipClass-L">IP Class</th>
-                  <td id="result_ipClass">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">CIDR Notation</th>
-                  <td id="result_cidr">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">IP Type</th>
-                  <td id="result_ipType">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">Short</th>
-                  <td id="result_short">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">Binary ID</th>
-                  <td id="result_binaryId">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">Integer ID</th>
-                  <td id="result_intId">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">Hex ID</th>
-                  <td id="result_hexId">NA</td>
-              </tr>
-              <tr>
-                  <th id="table-2-L">in-addr.arpa</th>
-                  <td id="result_addrArpa">NA</td>
-              </tr>
-          </table>
-      </div>
-  </div>
-  <div class="row" id="possible">
-    <div id="div-table-3" class="col-md-8 col-md-offset-2 mainbox">
-        <!-- <h2 id="div3header">All possible /29 network</h2>
-        <table id="table-3" class="table">
-            <tr>
-                <th id="table-2-L">Network Address</th>
-                <th id="all_host">Usable Host Range</th>
-                <th id="all_broad">Broadcast Address</th>
-            </tr>
-        </table> -->
-    </div>
-</div>
+    <div class="row panel with-nav-tabs  mainbox col-md-8 col-md-offset-2" id="allshow">
+                <div class="panel-heading">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#result" data-toggle="tab">Result</a></li>
+                            <li><a href="#possible" data-toggle="tab">All possible networt</a></li>
+                        </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="row tab-pane fade in active" id="result">
+                        <div id="div-table-2" class=" mainbox">
+                            <table id="table-2" class="table">
+                                <tr>
+                                    <th id="table-2-L">IP Address</th>
+                                    <td id="result_ipAddr">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">Network Address</th>
+                                    <td id="result_networkAddr">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">Usable Host IP Range</th>
+                                    <td id="result_ipRange">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">Broadcast Address</th>
+                                    <td id="result_broadcast">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">Total Number of Hosts</th>
+                                    <td id="result_totalHost">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">Number of Usable Hosts</th>
+                                    <td id="result_usableHost">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">Subnet Mask</th>
+                                    <td id="result_subnetMask">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">Wildcard Mask</th>
+                                    <td id="result_wildcard">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">Binary Subnet Mask</th>
+                                    <td id="result_binarySubnet">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="result_ipClass-L">IP Class</th>
+                                    <td id="result_ipClass">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">CIDR Notation</th>
+                                    <td id="result_cidr">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">IP Type</th>
+                                    <td id="result_ipType">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">Short</th>
+                                    <td id="result_short">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">Binary ID</th>
+                                    <td id="result_binaryId">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">Integer ID</th>
+                                    <td id="result_intId">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">Hex ID</th>
+                                    <td id="result_hexId">NA</td>
+                                </tr>
+                                <tr>
+                                    <th id="table-2-L">in-addr.arpa</th>
+                                    <td id="result_addrArpa">NA</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row tab-pane fade" id="possible">
+                      <div id="div-table-3" class="mainbox">
+                          <!-- <h2 id="div3header">All possible /29 network</h2>
+                          <table id="table-3" class="table">
+                              <tr>
+                                  <th id="table-2-L">Network Address</th>
+                                  <th id="all_host">Usable Host Range</th>
+                                  <th id="all_broad">Broadcast Address</th>
+                              </tr>
+                          </table> -->
+                      </div>
+                  </div>
+                    </div>
+                </div>
+            </div>
+
+
 
 </div>
 </body>

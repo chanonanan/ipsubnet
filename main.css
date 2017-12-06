@@ -1,19 +1,32 @@
 .mainbox{
   text-align: center;
+  background-color: #fff;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  position: absolute;
+  width: 100%;
+}
+.mainbox2{
+  text-align: center;
   border: 1px solid #ccc;
   background-color: #fff;
   border-radius: 15px;
   padding: 6px 12px;
   margin-bottom: 30px;
   padding-bottom: 20px;
+
 }
 .main{
   margin-top: 30px;
 }
-#result{
+/*#result{
   display: none;
 }
 #possible{
+  display: none;
+}*/
+#allshow{
   display: none;
 }
 .form-control1 {
